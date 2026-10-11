@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang=“ja”>
+    <head>
+        <meta http-equiv="content-language" content="ja">
+        <meta name="robots" content="noindex,nofollow">
+        <meta charset="UTF-8">
+        <title>タスク編集画面</title>
+    </head>
+    <body>
+        <header>
+            <button onclick="location.href='./login.html'">ユーザー1(ログアウト)</button>
+        </header>
+        <h1>タスク編集</h1>
+        <form action="./task-list.html" method="get" class="form-update">
+			<div class="form-update">
+				<input type="number" id="id" name="id" value="999" readonly />
+			</div>
+			<div class="form-update">
+				<input type="text" id="title" name="title" placeholder="タスク名" required />
+			</div>
+			<div class="form-update">
+				<label for="期日">期日</label>
+				<input
+					type="datetime-local"
+					id="meeting-time"
+					name="meeting-time"
+					min="2026-10-01T00:00"
+					max="2030-10-01T00:00" />
+			</div>
+			<fieldset>
+				<legend>ステータス</legend>
+				<div class="form-update">
+					<input type="radio" id="status" name="status" value="未完了" checked />
+					<label for="未完了">未完了</label>
+				</div>
+				<div class="form-update">
+					<input type="radio" id="status" name="status" value="対応中" />
+					<label for="対応中">対応中</label>
+				</div>
+				<div class="form-update">
+					<input type="radio" id="status" name="status" value="完了" />
+					<label for="完了">完了</label>
+				</div>
+			</fieldset>
+			<div class="form-update">
+				<textarea id="detail" name="detail" rows="5" cols="33" placeholder="詳細"></textarea>
+			</div>
+			<div class="form-update">
+				<input type="button" onclick="location.href='./task-list.html'" value="戻る" />
+			</div>
+			<div class="form-update">
+				<input type="submit" value="編集" />
+			</div>
+        </form>
+    </body>
+</html>
